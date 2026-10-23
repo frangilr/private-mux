@@ -10,6 +10,8 @@ xterm.js (used by VSCode's emulated terminal), the local shell, and SSH to login
 to remote machines; see [SECURITY.md](SECURITY.md) for the limits of those privacy
 claims.
 
+![pmux showing local and remote terminal tabs](demo.png)
+
 Others are welcome to use and modify it under the [MIT license](LICENSE).
 It is provided as-is, without warranty, and I accept no liability for its use
 to the extent permitted by law. This is a personal prototype, not a security
