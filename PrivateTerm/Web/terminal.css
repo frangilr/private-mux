@@ -1,0 +1,5 @@
+:root { color-scheme: dark; }
+html, body { height: 100%; margin: 0; padding: 0; overflow: hidden; background: #1e1e1e; }
+#terminal { position: absolute; inset: 0 0 24px 0; padding: 12px 6px 8px 10px; box-sizing: border-box; }
+.xterm { height: 100%; }
+.xterm-viewport { overflow-y: auto !important; }

@@ -1,0 +1,9 @@
+.DS_Store
+build/
+DerivedData/
+frontend/node_modules/
+*.xcuserstate
+xcuserdata/
+*.app/
+*.zip
+CODEX_HANDOFF.md

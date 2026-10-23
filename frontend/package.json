@@ -1,0 +1,10 @@
+{
+  "name": "privateterm-vendoring-only",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Build-time download of pinned xterm.js browser assets. No JS dependency installation occurs at app runtime.",
+  "dependencies": {
+    "@xterm/addon-fit": "0.11.0",
+    "@xterm/xterm": "6.0.0"
+  }
+}

@@ -1,0 +1,177 @@
+// !$*UTF8*$!
+{
+    archiveVersion = 1;
+    classes = {};
+    objectVersion = 56;
+    objects = {
+
+/* Begin PBXBuildFile section */
+        01A000000000000000000001 = {isa = PBXBuildFile; fileRef = 02A000000000000000000001; };
+        01A000000000000000000002 = {isa = PBXBuildFile; fileRef = 02A000000000000000000002; };
+        01A000000000000000000003 = {isa = PBXBuildFile; fileRef = 02A000000000000000000003; };
+        01A000000000000000000004 = {isa = PBXBuildFile; fileRef = 02A000000000000000000004; };
+        01A000000000000000000005 = {isa = PBXBuildFile; fileRef = 02A000000000000000000005; };
+        01A000000000000000000006 = {isa = PBXBuildFile; fileRef = 02A000000000000000000006; };
+        01A00000000000000000000A = {isa = PBXBuildFile; fileRef = 02A00000000000000000000A; };
+        01A00000000000000000000B = {isa = PBXBuildFile; fileRef = 02A00000000000000000000B; };
+        01A00000000000000000000C = {isa = PBXBuildFile; fileRef = 02A00000000000000000000C; };
+        01A00000000000000000000D = {isa = PBXBuildFile; fileRef = 02A00000000000000000000D; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+        02A000000000000000000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateTermApp.swift; sourceTree = "<group>"; };
+        02A000000000000000000002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindow.swift; sourceTree = "<group>"; };
+        02A000000000000000000003 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalSession.swift; sourceTree = "<group>"; };
+        02A000000000000000000004 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTYProcess.swift; sourceTree = "<group>"; };
+        02A000000000000000000005 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = PTYShim.c; sourceTree = "<group>"; };
+        02A000000000000000000006 = {isa = PBXFileReference; lastKnownFileType = folder; path = Web; sourceTree = "<group>"; };
+        02A000000000000000000007 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTYShim.h; sourceTree = "<group>"; };
+        02A000000000000000000008 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PrivateTerm-Bridging-Header.h"; sourceTree = "<group>"; };
+        02A000000000000000000009 = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pmux.app; sourceTree = BUILT_PRODUCTS_DIR; };
+        02A00000000000000000000A = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHSettings.swift; sourceTree = "<group>"; };
+        02A00000000000000000000B = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTmux.swift; sourceTree = "<group>"; };
+        02A00000000000000000000C = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTerminalView.swift; sourceTree = "<group>"; };
+        02A00000000000000000000D = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Branding/pmux.icns; sourceTree = "<group>"; };
+        02A00000000000000000000E = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+        03A000000000000000000001 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+        04A000000000000000000001 = {isa = PBXGroup; children = (04A000000000000000000002, 04A000000000000000000003); sourceTree = "<group>"; };
+        04A000000000000000000002 = {isa = PBXGroup; path = PrivateTerm; sourceTree = "<group>"; children = (
+            02A000000000000000000001,
+            02A000000000000000000002,
+            02A000000000000000000003,
+            02A000000000000000000004,
+            02A00000000000000000000A,
+            02A00000000000000000000B,
+            02A00000000000000000000C,
+            02A000000000000000000005,
+            02A000000000000000000007,
+            02A000000000000000000008,
+            02A000000000000000000006,
+            02A00000000000000000000D,
+            02A00000000000000000000E
+        ); };
+        04A000000000000000000003 = {isa = PBXGroup; name = Products; sourceTree = "<group>"; children = (02A000000000000000000009); };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+        05A000000000000000000001 = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = 09A000000000000000000002;
+            buildPhases = (06A000000000000000000001, 03A000000000000000000001, 07A000000000000000000001);
+            buildRules = ();
+            dependencies = ();
+            name = PrivateTerm;
+            productName = PrivateTerm;
+            productReference = 02A000000000000000000009;
+            productType = "com.apple.product-type.application";
+        };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+        08A000000000000000000001 = {
+            isa = PBXProject;
+            attributes = { BuildIndependentTargetsInParallel = 1; LastUpgradeCheck = 1600; TargetAttributes = {05A000000000000000000001 = { CreatedOnToolsVersion = 16.0; }; }; };
+            buildConfigurationList = 09A000000000000000000001;
+            compatibilityVersion = "Xcode 14.0";
+            developmentRegion = en;
+            hasScannedForEncodings = 0;
+            knownRegions = (en, Base);
+            mainGroup = 04A000000000000000000001;
+            productRefGroup = 04A000000000000000000003;
+            projectDirPath = "";
+            projectRoot = "";
+            targets = (05A000000000000000000001);
+        };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+        07A000000000000000000001 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (01A000000000000000000006, 01A00000000000000000000D); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+        06A000000000000000000001 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (
+            01A000000000000000000001,
+            01A000000000000000000002,
+            01A000000000000000000003,
+            01A000000000000000000004,
+            01A000000000000000000005,
+            01A00000000000000000000A,
+            01A00000000000000000000B,
+            01A00000000000000000000C
+        ); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+        0AA000000000000000000001 = {isa = XCBuildConfiguration; name = Debug; buildSettings = {
+            ALWAYS_SEARCH_USER_PATHS = NO;
+            CLANG_ENABLE_MODULES = YES;
+            CLANG_ENABLE_OBJC_ARC = YES;
+            COPY_PHASE_STRIP = NO;
+            DEBUG_INFORMATION_FORMAT = dwarf;
+            GCC_OPTIMIZATION_LEVEL = 0;
+            GCC_PREPROCESSOR_DEFINITIONS = ("DEBUG=1", "$(inherited)");
+            MACOSX_DEPLOYMENT_TARGET = 14.0;
+            SDKROOT = macosx;
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+            SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+        }; };
+        0AA000000000000000000002 = {isa = XCBuildConfiguration; name = Release; buildSettings = {
+            ALWAYS_SEARCH_USER_PATHS = NO;
+            CLANG_ENABLE_MODULES = YES;
+            CLANG_ENABLE_OBJC_ARC = YES;
+            COPY_PHASE_STRIP = YES;
+            DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+            MACOSX_DEPLOYMENT_TARGET = 14.0;
+            SDKROOT = macosx;
+            SWIFT_COMPILATION_MODE = wholemodule;
+            SWIFT_OPTIMIZATION_LEVEL = "-O";
+        }; };
+        0AA000000000000000000003 = {isa = XCBuildConfiguration; name = Debug; buildSettings = {
+            CODE_SIGNING_ALLOWED = NO;
+            GENERATE_INFOPLIST_FILE = NO;
+            INFOPLIST_FILE = PrivateTerm/Info.plist;
+            INFOPLIST_KEY_CFBundleDisplayName = pmux;
+            INFOPLIST_KEY_CFBundleIconFile = pmux.icns;
+            INFOPLIST_KEY_CFBundleName = PrivateMux;
+            INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+            LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks");
+            PRODUCT_BUNDLE_IDENTIFIER = "dev.local.PrivateTerm";
+            PRODUCT_NAME = pmux;
+            SWIFT_OBJC_BRIDGING_HEADER = "PrivateTerm/PrivateTerm-Bridging-Header.h";
+            SWIFT_VERSION = 5.0;
+            HEADER_SEARCH_PATHS = ("$(inherited)", "$(SRCROOT)/PrivateTerm");
+            ENABLE_APP_SANDBOX = NO;
+            ENABLE_HARDENED_RUNTIME = NO;
+        }; };
+        0AA000000000000000000004 = {isa = XCBuildConfiguration; name = Release; buildSettings = {
+            CODE_SIGNING_ALLOWED = NO;
+            GENERATE_INFOPLIST_FILE = NO;
+            INFOPLIST_FILE = PrivateTerm/Info.plist;
+            INFOPLIST_KEY_CFBundleDisplayName = pmux;
+            INFOPLIST_KEY_CFBundleIconFile = pmux.icns;
+            INFOPLIST_KEY_CFBundleName = PrivateMux;
+            INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+            LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks");
+            PRODUCT_BUNDLE_IDENTIFIER = "dev.local.PrivateTerm";
+            PRODUCT_NAME = pmux;
+            SWIFT_OBJC_BRIDGING_HEADER = "PrivateTerm/PrivateTerm-Bridging-Header.h";
+            SWIFT_VERSION = 5.0;
+            HEADER_SEARCH_PATHS = ("$(inherited)", "$(SRCROOT)/PrivateTerm");
+            ENABLE_APP_SANDBOX = NO;
+            ENABLE_HARDENED_RUNTIME = NO;
+        }; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+        09A000000000000000000001 = {isa = XCConfigurationList; buildConfigurations = (0AA000000000000000000001, 0AA000000000000000000002); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+        09A000000000000000000002 = {isa = XCConfigurationList; buildConfigurations = (0AA000000000000000000003, 0AA000000000000000000004); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+    };
+    rootObject = 08A000000000000000000001;
+}
