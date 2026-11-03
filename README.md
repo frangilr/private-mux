@@ -101,6 +101,8 @@ of OS-enforced network isolation.
 ## Use
 
 - Click an entry in the left sidebar to focus its terminal.
+- In Codex CLI, press **Shift-Enter** to insert a newline in a message;
+  **Enter** submits it.
 - Click **+** or press **Command-T** to add a new terminal.
 - Press **Command-Up/Down** to move through terminals within the current local
   or SSH host group, wrapping within that group. Press **Shift-Command-Up/Down**

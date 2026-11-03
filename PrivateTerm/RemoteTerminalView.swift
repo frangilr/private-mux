@@ -21,6 +21,7 @@ final class RemoteTerminalView: NSObject, ObservableObject, WKScriptMessageHandl
 
     override init() {
         let config = WKWebViewConfiguration()
+        if #available(macOS 15.0, *) { config.writingToolsBehavior = .none }
         config.websiteDataStore = .nonPersistent()
         config.defaultWebpagePreferences.allowsContentJavaScript = true
         config.userContentController = WKUserContentController()

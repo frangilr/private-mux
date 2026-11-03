@@ -22,6 +22,7 @@ final class TerminalSession: NSObject, ObservableObject, Identifiable, WKScriptM
     init(title: String) {
         self.title = title
         let config = WKWebViewConfiguration()
+        if #available(macOS 15.0, *) { config.writingToolsBehavior = .none }
         config.websiteDataStore = .nonPersistent()
         config.preferences.javaScriptCanOpenWindowsAutomatically = false
         config.defaultWebpagePreferences.allowsContentJavaScript = true

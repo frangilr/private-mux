@@ -3,7 +3,8 @@
   const send = message => window.webkit.messageHandlers.terminal.postMessage(message);
   const term = new Terminal({
     cursorBlink: true,
-    cursorStyle: 'block',
+    cursorStyle: 'bar',
+    cursorWidth: 1,
     scrollback: 3000,       // In-memory scrollback, never app-written to disk.
     fontSize: 13,
     lineHeight: 1.12,
@@ -26,9 +27,39 @@
   term.onBinary(data => send({type: 'binary', data: btoa(data)}));
   term.onResize(({cols, rows}) => send({type: 'resize', cols, rows}));
 
-  // Let macOS handle ordinary Command-key shortcuts (including copy/paste).
   term.attachCustomKeyEventHandler(event => {
+    // Match Ghostty's macOS Command-Backspace binding: Ctrl-U (0x15).
+    // Reference: ghostty src/config/Config.zig at commit a455842c28.
+    if (event.type === 'keydown' && event.key === 'Backspace' && event.metaKey &&
+        !event.shiftKey && !event.ctrlKey && !event.altKey && !event.isComposing) {
+      event.preventDefault();
+      send({type: 'input', data: '\x15'});
+      return false;
+    }
+    // Match Ghostty's natural editing bindings: Option arrows send Esc-b/f;
+    // Command arrows send Ctrl-A/E. The shell decides word/line boundaries.
+    if (event.type === 'keydown' && !event.shiftKey && !event.ctrlKey &&
+        !event.isComposing && (event.key === 'ArrowLeft' || event.key === 'ArrowRight')) {
+      const left = event.key === 'ArrowLeft';
+      let data = null;
+      if (event.altKey && !event.metaKey) data = left ? '\x1bb' : '\x1bf';
+      else if (event.metaKey && !event.altKey) data = left ? '\x01' : '\x05';
+      if (data !== null) {
+        event.preventDefault();
+        send({type: 'input', data});
+        return false;
+      }
+    }
+    // Let macOS handle other Command-key shortcuts (including copy/paste).
     if (event.metaKey) return false;
+    // Codex uses LF (Ctrl-J) for a composer newline. xterm otherwise sends
+    // the same CR for Enter and Shift-Enter, which submits the message.
+    if (event.type === 'keydown' && event.key === 'Enter' && event.shiftKey &&
+        !event.ctrlKey && !event.altKey && !event.isComposing) {
+      event.preventDefault();
+      send({type: 'input', data: '\n'});
+      return false;
+    }
     return true;
   });
 
