@@ -11,8 +11,8 @@
     fontFamily: 'Menlo, Monaco, monospace',
     allowProposedApi: false,
     theme: {
-      background: '#1e1e1e', foreground: '#e1dcdc', cursor: '#e1dcdc',
-      selectionBackground: '#3b3b3b', black: '#1e1e1e',
+      background: '#191a1b', foreground: '#e1dcdc', cursor: '#e1dcdc',
+      selectionBackground: '#3b3b3b', black: '#191a1b',
       red: '#f38ba8', green: '#a6e3a1', yellow: '#f9e2af',
       blue: '#89b4fa', magenta: '#cba6f7', cyan: '#94e2d5',
       white: '#cdd6f4'

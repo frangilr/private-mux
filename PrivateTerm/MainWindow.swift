@@ -2,8 +2,8 @@ import AppKit
 import SwiftUI
 
 private enum AppPalette {
-    static let terminal = Color(white: 30.0 / 255.0) // #1E1E1E
-    static let sidebar = Color(white: 25.0 / 255.0) // #191919
+    static let terminal = Color(red: 25.0 / 255.0, green: 26.0 / 255.0, blue: 27.0 / 255.0) // #191A1B
+    static let sidebar = Color(white: 30.0 / 255.0) // #1E1E1E
     static let divider = Color(white: 49.0 / 255.0)
     static let text = Color(red: 225.0 / 255.0, green: 220.0 / 255.0, blue: 220.0 / 255.0) // #E1DCDC
     static let heading = Color(red: 236.0 / 255.0, green: 232.0 / 255.0, blue: 232.0 / 255.0)
@@ -75,7 +75,7 @@ struct MainWindow: View {
     var body: some View {
         HStack(spacing: 0) {
             sidebar
-                .frame(width: 200)
+                .frame(width: 188)
             Rectangle()
                 .fill(AppPalette.divider)
                 .frame(width: 1)
@@ -285,12 +285,11 @@ struct MainWindow: View {
             HStack(spacing: 5) {
                 SettingsLink {
                     Image(systemName: "gearshape")
+                        .font(.system(size: 14))
                 }
                 .buttonStyle(.borderless)
                 .help("Settings")
                 .accessibilityLabel("Settings")
-                Spacer()
-                Image(systemName: "lock.shield")
             }
             .font(.caption2)
             .foregroundStyle(AppPalette.muted)
